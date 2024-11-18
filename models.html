@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Models</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="images/mercedes-logo.png" alt="Mercedes-Benz Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+        <!-- Login/Signup Button -->
+        <div class="auth-buttons">
+            <a href="login.html" id="login-btn" class="auth-btn">Login</a>
+            <a href="signup.html" id="signup-btn" class="auth-btn">Sign Up</a>
+            <!-- Sign Out Button (Initially hidden) -->
+            <button id="sign-out-btn" class="auth-btn" style="display: none;">Sign Out</button>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <h1>About Mercedes-Benz</h1>
+            <p>Mercedes-Benz is a symbol of luxury, performance, and world-class engineering. With a history spanning more than a century, the brand continues to innovate and lead the automotive industry.</p>
+    
+            <h2>Explore Our Iconic Models</h2>
+            <p>Select a car class to filter and explore the models that fit your needs.</p>
+    
+            <!-- Car Class Filter -->
+            <div class="filter-container">
+                <label for="car-class">Filter by Car Class:</label>
+                <select id="car-class" onchange="filterModels()">
+                    <option value="">All Models</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Coupe">Coupe</option>
+                    <option value="Convertible">Convertible</option>
+                    <option value="Electric">Electric</option>
+                </select>
+            </div>
+    
+            <!-- Cards for Mercedes-Benz Models -->
+            <div id="model-cards-container" class="model-cards-container">
+                <!-- Model Card: A-Class Sedan -->
+                <div class="model-card" data-model="A-Class" data-class="Sedan">
+                    <div class="model-card-content">
+                        <img src="images/a-class.jpg" alt="Mercedes-Benz A-Class">
+                        <div class="model-info">
+                            <h3>A-Class Sedan</h3>
+                            <p class="model-description">Compact luxury sedan with advanced technology, great for city driving.</p>
+                            <a href="models/a-class.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: GLA SUV -->
+                <div class="model-card" data-model="GLA" data-class="SUV">
+                    <div class="model-card-content">
+                        <img src="images/gla.jpg" alt="Mercedes-Benz GLA">
+                        <div class="model-info">
+                            <h3>GLA SUV</h3>
+                            <p class="model-description">Sporty luxury SUV, perfect for adventures with family or friends.</p>
+                            <a href="models/gla.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: C-Class Coupe -->
+                <div class="model-card" data-model="C-Class" data-class="Coupe">
+                    <div class="model-card-content">
+                        <img src="images/c-class.jpg" alt="Mercedes-Benz C-Class Coupe">
+                        <div class="model-info">
+                            <h3>C-Class Coupe</h3>
+                            <p class="model-description">A sleek, sporty coupe with sophisticated technology and luxury.</p>
+                            <a href="models/c-class.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: EQC Electric SUV -->
+                <div class="model-card" data-model="EQC" data-class="Electric">
+                    <div class="model-card-content">
+                        <img src="images/eqc.jpg" alt="Mercedes-Benz EQC">
+                        <div class="model-info">
+                            <h3>EQC Electric SUV</h3>
+                            <p class="model-description">Mercedes-Benz’s first all-electric SUV with zero emissions and high performance.</p>
+                            <a href="models/eqc.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Additional Models -->
+                <!-- Model Card: E-Class Sedan -->
+                <div class="model-card" data-model="E-Class" data-class="Sedan">
+                    <div class="model-card-content">
+                        <img src="images/e-class.jpg" alt="Mercedes-Benz E-Class">
+                        <div class="model-info">
+                            <h3>E-Class Sedan</h3>
+                            <p class="model-description">A luxurious sedan combining cutting-edge tech with exceptional comfort.</p>
+                            <a href="models/e-class.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: S-Class Sedan -->
+                <div class="model-card" data-model="S-Class" data-class="Sedan">
+                    <div class="model-card-content">
+                        <img src="images/s-class.jpg" alt="Mercedes-Benz S-Class">
+                        <div class="model-info">
+                            <h3>S-Class Sedan</h3>
+                            <p class="model-description">The epitome of luxury, delivering ultimate comfort and performance.</p>
+                            <a href="models/s-class.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: GLE SUV -->
+                <div class="model-card" data-model="GLE" data-class="SUV">
+                    <div class="model-card-content">
+                        <img src="images/gle.jpg" alt="Mercedes-Benz GLE">
+                        <div class="model-info">
+                            <h3>GLE SUV</h3>
+                            <p class="model-description">An all-terrain luxury SUV with unparalleled performance and space.</p>
+                            <a href="models/gle.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: G-Class SUV -->
+                <div class="model-card" data-model="G-Class" data-class="SUV">
+                    <div class="model-card-content">
+                        <img src="images/g-class.jpg" alt="Mercedes-Benz G-Class">
+                        <div class="model-info">
+                            <h3>G-Class SUV</h3>
+                            <p class="model-description">A rugged, luxury off-roader that offers a unique blend of style and durability.</p>
+                            <a href="models/g-class.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: CLA Coupe -->
+                <div class="model-card" data-model="CLA" data-class="Coupe">
+                    <div class="model-card-content">
+                        <img src="images/cla.jpg" alt="Mercedes-Benz CLA">
+                        <div class="model-info">
+                            <h3>CLA Coupe</h3>
+                            <p class="model-description">A stylish and compact coupe with innovative features and sporty dynamics.</p>
+                            <a href="models/cla.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: SL Roadster -->
+                <div class="model-card" data-model="SL" data-class="Convertible">
+                    <div class="model-card-content">
+                        <img src="images/sl.jpg" alt="Mercedes-Benz SL">
+                        <div class="model-info">
+                            <h3>SL Roadster</h3>
+                            <p class="model-description">A performance-driven convertible that combines elegance and power.</p>
+                            <a href="models/sl.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: SLC Roadster -->
+                <div class="model-card" data-model="SLC" data-class="Convertible">
+                    <div class="model-card-content">
+                        <img src="images/slc.jpg" alt="Mercedes-Benz SLC">
+                        <div class="model-info">
+                            <h3>SLC Roadster</h3>
+                            <p class="model-description">A compact roadster designed for thrill-seekers with a love for driving.</p>
+                            <a href="models/slc.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: EQS Electric Sedan -->
+                <div class="model-card" data-model="EQS" data-class="Electric">
+                    <div class="model-card-content">
+                        <img src="images/eqs.jpg" alt="Mercedes-Benz EQS">
+                        <div class="model-info">
+                            <h3>EQS Electric Sedan</h3>
+                            <p class="model-description">The EQS represents the future of luxury electric sedans with revolutionary tech.</p>
+                            <a href="models/eqs.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Model Card: EQB Electric SUV -->
+                <div class="model-card" data-model="EQB" data-class="Electric">
+                    <div class="model-card-content">
+                        <img src="images/eqb.jpg" alt="Mercedes-Benz EQB">
+                        <div class="model-info">
+                            <h3>EQB Electric SUV</h3>
+                            <p class="model-description">A compact electric SUV offering premium features with zero emissions.</p>
+                            <a href="models/eqb.html" class="more-details-btn">More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    
+
+    <footer>
+        <p>Made by Ulan Abdramanov</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

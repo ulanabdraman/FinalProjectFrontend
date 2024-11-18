@@ -1,0 +1,184 @@
+/* Общие стили для страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo img {
+    width: 300px;
+    height: auto;
+    filter: invert(1); /* Без инверсии */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#theme-toggle:hover {
+    color: #ccc;
+}
+
+/* Кнопка "Назад" */
+#back-button-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+/* Hero Section (Введение) */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f2f2f2;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    color: #333;
+    max-width: 50%;
+}
+
+#hero p {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+#hero-image {
+    max-width: 45%;
+}
+
+#hero img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Секции характеристик */
+#specifications {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#specifications h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Темная тема */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #111;
+}
+
+body.dark-mode #hero {
+    background-color: #444;
+}
+
+body.dark-mode table {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode th {
+    background-color: #222;
+}
+
+body.dark-mode td {
+    background-color: #333;
+}
